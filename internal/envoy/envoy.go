@@ -214,7 +214,7 @@ func (srv *Server) buildBootstrapConfig() ([]byte, error) {
 	}
 
 	adminCfg := &envoy_config_bootstrap_v3.Admin{
-		AccessLogPath: "/tmp/admin_access.log",
+		AccessLogPath: "/dev/stdout",
 		Address: &envoy_config_core_v3.Address{
 			Address: &envoy_config_core_v3.Address_SocketAddress{
 				SocketAddress: &envoy_config_core_v3.SocketAddress{
